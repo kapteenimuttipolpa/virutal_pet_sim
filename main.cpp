@@ -11,5 +11,7 @@ int main()
     all_pets[0].sleep();
     all_pets[0].display_stats();
     all_pets[0].save_to_file();
+    all_pets[0].load_state_from_file();
+    all_pets[0].display_stats();
     return 0;
 }
