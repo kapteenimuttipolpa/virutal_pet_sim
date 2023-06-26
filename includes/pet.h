@@ -12,6 +12,7 @@ struct Pet{
     void play();
     void feed();
     void sleep();
+    void display_stats();
 };
 void init_pet(std::vector<Pet>& all_pets);
 
