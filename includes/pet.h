@@ -15,6 +15,7 @@ struct Pet{
     void sleep();
     void display_stats();
     void save_to_file();
+    void load_state_from_file();
 };
 void init_pet(std::vector<Pet>& all_pets);
 
