@@ -11,6 +11,7 @@ struct Pet{
     int energy = 100;
     void play();
     void feed();
+    void sleep();
 };
 void init_pet(std::vector<Pet>& all_pets);
 
