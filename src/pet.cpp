@@ -1,6 +1,10 @@
 #include "../includes/pet.h"
+#include <stdexcept>
 #include <string>
 #include <iostream>
+#include <fstream>
+#include <exception>
+#include <ios>
 
 void init_pet(std::vector<Pet>& all_pets)
 {
@@ -36,4 +40,16 @@ void Pet::display_stats(){
     std::cout << name << "'s"<<" fullness is at " << fullness << " now.\n";
     std::cout << name << "'s"<<" happiness is at " << happiness << " now.\n";
     std::cout << name << "'s"<<" energy is at " << energy << " now.\n";
+}
+void Pet::save_to_file(){
+    std::string file_name{"pet_data.txt"};
+    std::fstream file_object(file_name, std::ios::app);
+    if(!file_object.is_open()){
+        throw std::runtime_error("Could not open the file!\n");
+        return;
+    }
+    file_object << name << "'s"<<" fullness is at " << fullness << " now.\n";
+    file_object << name << "'s"<<" happiness is at " << happiness << " now.\n";
+    file_object << name << "'s"<<" energy is at " << energy << " now.\n\n";
+    file_object.close();
 }

@@ -2,6 +2,7 @@
 #define PET_H
 #include <string>
 #include <vector>
+#include <fstream>
 
 struct Pet{
     std::string name;
@@ -13,6 +14,7 @@ struct Pet{
     void feed();
     void sleep();
     void display_stats();
+    void save_to_file();
 };
 void init_pet(std::vector<Pet>& all_pets);
 
