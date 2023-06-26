@@ -8,6 +8,8 @@ struct Pet{
     std::string type;
     int happiness;
     int fullness;
+    int energy = 100;
+    void play();
     void feed();
 };
 void init_pet(std::vector<Pet>& all_pets);
