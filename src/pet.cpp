@@ -27,3 +27,8 @@ void Pet::play(){
     std::cout << "Pets happiness is at " << happiness << " now.\n";
     std::cout << "Pets energy is at " << energy << " now.\n";
 }
+void Pet::sleep(){
+    std::cout << "Pet is asleep now !\n";
+    energy = 100;
+    std::cout << "Energy restored back to " << energy << '\n';
+}
