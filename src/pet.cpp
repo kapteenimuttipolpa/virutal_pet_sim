@@ -32,3 +32,8 @@ void Pet::sleep(){
     energy = 100;
     std::cout << "Energy restored back to " << energy << '\n';
 }
+void Pet::display_stats(){
+    std::cout << name << "'s"<<" fullness is at " << fullness << " now.\n";
+    std::cout << name << "'s"<<" happiness is at " << happiness << " now.\n";
+    std::cout << name << "'s"<<" energy is at " << energy << " now.\n";
+}
