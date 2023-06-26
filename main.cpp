@@ -7,5 +7,6 @@ int main()
     std::vector<Pet> all_pets{};
     init_pet(all_pets);
     all_pets[0].feed();
+    all_pets[0].play();
     return 0;
 }

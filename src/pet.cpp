@@ -20,3 +20,10 @@ void Pet::feed(){
     std::cout << "Pets fullness is at " << fullness << " now.\n";
     std::cout << "Pets happiness is at " << happiness << " now.\n";
 }
+void Pet::play(){
+    std::cout << "You played with the pet!\n";
+    happiness+= 1;
+    energy -= 10;
+    std::cout << "Pets happiness is at " << happiness << " now.\n";
+    std::cout << "Pets energy is at " << energy << " now.\n";
+}
